@@ -13,7 +13,7 @@ const SmurfsList = props => {
   }
 
   if (props.error) {
-    return <div>{props.error}</div>;
+    return <div style={{color: "red"}}><p>{props.error}</p></div>;
   }
 
   return props.smurfs.map(smurf => {
