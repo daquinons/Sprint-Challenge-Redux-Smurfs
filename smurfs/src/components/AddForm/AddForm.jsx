@@ -23,9 +23,9 @@ const AddForm = props => {
   return (
     <div className="add-form">
       <h2>Add a Smurf</h2>
-      <input ref={nameInputRef} type="text" name="" id="" />
-      <input ref={ageInputRef} type="text" name="" id="" />
-      <input ref={heightInputRef} type="text" name="" id="" />
+      <input ref={nameInputRef} placeholder="Name" type="text" name="" id="" />
+      <input ref={ageInputRef} placeholder="Age" type="text" name="" id="" />
+      <input ref={heightInputRef} placeholder="Height" type="text" name="" id="" />
       <button onClick={onClick}>Add Smurf</button>
     </div>
   );

@@ -53,3 +53,15 @@ export const postNewSmurf = (smurf) => async dispatch => {
 
   dispatch(setLoading(false));
 }
+
+export const deleteSmurf = (id) => async dispatch => {
+  try {
+    dispatch(setLoading(true));
+    const dataResponse = await axios.delete(API_URL + "/" + id);
+    dispatch(addSmurfs(dataResponse.data)); 
+  } catch (error) {
+    dispatch(setError(error.message));
+  }
+
+  dispatch(setLoading(false));
+}
