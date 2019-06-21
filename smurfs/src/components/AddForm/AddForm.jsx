@@ -10,7 +10,7 @@ const AddForm = props => {
   const onClick = () => {
     const newSmurf = {
       name: nameInputRef.current.value,
-      age: ageInputRef.current.value,
+      age: Number(ageInputRef.current.value),
       height: heightInputRef.current.value
     };
 

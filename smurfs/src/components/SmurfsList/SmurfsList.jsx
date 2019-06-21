@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { getAllSmurfs, setLoading } from '../../actions/index';
+import { getAllSmurfs } from '../../actions/index';
+import Smurf from '../Smurf/Smurf';
 
 const SmurfsList = props => {
   React.useEffect(() => {
@@ -16,7 +17,11 @@ const SmurfsList = props => {
   }
 
   return props.smurfs.map(smurf => {
-    return <id>{smurf.name}</id>;
+    return (
+      <div key={smurf.id}>
+        <Smurf smurf={smurf} />
+      </div>
+    );
   });
 };
 
