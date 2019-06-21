@@ -22,8 +22,8 @@ let initialState = { smurfs: [], loading: false, error: null };
   Components can then read your store as, `state` and not `state.fooReducer`.
 */
 
-const smurf = (state = initialState, action) => {
-  switch (action) {
+export const smurf = (state = initialState, action) => {
+  switch (action.type) {
     case types.GET_ALL_SMURFS:
       return { ...state, smurfs: action.payload };
     case types.LOADING:
