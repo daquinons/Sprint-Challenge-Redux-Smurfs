@@ -41,3 +41,15 @@ export const getAllSmurfs = () => async dispatch => {
 
   dispatch(setLoading(false));
 }
+
+export const postNewSmurf = (smurf) => async dispatch => {
+  try {
+    dispatch(setLoading(true));
+    const dataResponse = await axios.post(API_URL, smurf);
+    dispatch(addSmurfs(dataResponse.data));  
+  } catch (error) {
+    dispatch(setError(error.message));
+  }
+
+  dispatch(setLoading(false));
+}
