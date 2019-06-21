@@ -9,11 +9,12 @@ const Smurf = props => {
     props.deleteSmurf(props.smurf.id);
   }
   return (
-    <div>
+    <div style={{width: "300px", margin: "0 auto"}}>
       <p>Name: {props.smurf.name}</p>
       <p>Age: {props.smurf.age}</p>
       <p>Height: {props.smurf.height}</p>
       <button onClick={onClickDelete}>Delete</button>
+      <hr />
     </div>
   );
 };
